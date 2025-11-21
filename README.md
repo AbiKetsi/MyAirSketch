@@ -1,8 +1,8 @@
-# AirSketch: Real-time Hand Gesture-based Drawing Application 🎨✋
+# MyAirSketch: Real-time Hand Gesture-based Drawing Application 🎨✋
 
 ## Overview 📖
 
-AirSketch is an advanced computer vision application that enables users to draw in the air using hand gestures. It utilizes real-time hand tracking and gesture recognition to create a virtual drawing canvas. This project demonstrates the integration of computer vision techniques, gesture recognition algorithms, and real-time video processing.
+MyAirSketch is an advanced computer vision application that enables users to draw in the air using hand gestures. It utilizes real-time hand tracking and gesture recognition to create a virtual drawing canvas. This project demonstrates the integration of computer vision techniques, gesture recognition algorithms, and real-time video processing.
 
 ## Technical Stack 🛠️
 
@@ -48,11 +48,9 @@ This function compares the y-coordinates of the index finger tip (landmark 8) an
 
 ### Adaptive Line Drawing
 
-```python
 if prev_point and np.linalg.norm(np.array(index_finger_tip) - np.array(prev_point)) > min_distance:
     cv2.line(canvas, prev_point, index_finger_tip, colors[colorIndex], line_thickness)
     prev_point = index_finger_tip
-```
 
 This algorithm ensures smooth line drawing by only rendering lines when the finger has moved a significant distance, reducing jitter and improving performance.
 
@@ -70,18 +68,14 @@ This algorithm ensures smooth line drawing by only rendering lines when the fing
    ```bash
    pip install opencv-python mediapipe numpy
    ```
-3. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/AirSketch.git
-   cd Air_Sketch
-   ```
+3. Clone the repository
 
 ## Usage 📋
 
 Run the application:
 
 ```bash
-python Air_Sketch.py
+python MyAirSketch.py
 ```
 
 - Use your index finger to draw in the air. ✍️
@@ -99,10 +93,6 @@ python Air_Sketch.py
 ## Contributing 🤝
 
 Contributions are welcome! Please fork the repository and submit a pull request with your improvements.
-
-## License 📄
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Acknowledgments 🙏
 
